@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Avatar </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Open+Sans:wght@500&family=Poppins:wght@300&family=Roboto&family=Rowdies&family=Rubik:wght@400;500&family=Russo+One&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+
+
+  
+  <style>
+  
+  body,html{ overflow:hidden;}
+  body {
+  align-items: center;
+  background: #efefef;
+  display: flex;
+  font-family: 'Rajdhani', sans-serif;
+  height: 100vh;
+ 
+  justify-content: center;
+}
+.contact-wrapper {
+background-color: #fce043;
+background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, .15);
+  border-radius: 0.75em;
+  padding: 2em;
+  width: 25em;
+}
+
+input{    width: 71%;
+    height: 39px;
+      padding: 0 74px;
+    height: 39px;border:none;
+    background: #fff;
+    border-radius: 10px;font-family: 'Luckiest Guy', cursive;
+}
+
+input:focus{border:none!important;outline:none;}
+
+#btn{    width: 152px;
+    height: 47px;
+    color: #ffffff;
+	font-size:20px;
+	font-weight:600;
+    background-color: #c16042;
+    background-image: linear-gradient(
+315deg
+, #28928b 0%, #ffea34 74%);
+    border: none;
+    border-radius: 10px;}
+	
+	h2{color:#fff;font-family: 'Luckiest Guy', cursive;text-shadow:2px 2px #000;}
+  </style>
+  
+  
+</head>
+
+<body>
+<div class="contact-wrapper">
+  <header class="login-cta">
+    <h2 class="text-center">Name Personality</h2>
+  </header>
+  
+   <center><img src="img/ava.png" width="100" height="100" class="mt-4" id="chpic"></center>
+     <center> <input type="text" id="name" class="mt-4" placeholder="Your name" required></center>
+     
+  
+
+
+     <center> <button id="btn"  class="mt-4">Check</button></center>
+  
+
+
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $("#btn").click(function(){
+  let name=  document.getElementById("name").value;
+	    $("#chpic").attr('src',`https://joeschmoe.io/api/v1/${name}`
+);
+	
+  });
+});
+</script>
+
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
